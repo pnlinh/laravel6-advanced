@@ -11,6 +11,12 @@
 |
 */
 
+use App\PostCard;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('postcards', function () {
+    PostCard::hello('Hello Laravel 6', 'foo@bar.com');
 });
