@@ -22,6 +22,7 @@ class PostCardSendingService
     public function hello($message, $email)
     {
         Mail::raw($message, function ($message) use ($email) {
+            /** @var Mail $message */
             $message->to($email);
         });
 
